@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="UTF-8" />
+
+    <!-- Favicon displayed in browser tab -->
+    <link rel="icon" type="image/svg+xml" href="/Ava.jpg" />
+
+    <!-- Ensure proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
+    <title>Ava Haust - Portfolio</title>
+
+    <!-- ------------------------------------------------------------
+      Dark Mode Flashing Removal on Page Reload
+      This script prevents a white flash when dark mode is enabled.
+      It reads the saved theme from localStorage and applies the 
+      'dark' class to the HTML element before the page renders.
+    ------------------------------------------------------------ -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem('theme'); // Get saved theme
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark'); // Enable dark mode
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- Root div for React to mount the app -->
+    <div id="root"></div>
+
+    <!-- Main React entry point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

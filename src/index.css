@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------
+  Theme Variables
+  These are custom CSS variables for colors. You can adjust them
+  to change the look of your site in light or dark mode.
+------------------------------------------------------------ */
+
+/* Active theme variables for Tailwind + custom use */
+@theme {
+  --color-background: var(--background);   /* Used for page background */
+  --color-foreground: var(--foreground);   /* Used for text and icons */
+  --color-card: var(--bg-card);            /* Used for cards or containers */
+}
+
+/* ------------------------------------------------------------
+  Light Mode Colors
+  Change these values to customize the light mode appearance
+------------------------------------------------------------ */
+:root {
+  --background: #F9F9F8;  /* Page background */
+  --foreground: #1A1A19;  /* Main text / foreground color */
+  --bg-card: #FFFFFF;      /* Card / container background */
+}
+
+/* ------------------------------------------------------------
+  Dark Mode Colors
+  Change these values to customize the dark mode appearance
+------------------------------------------------------------ */
+.dark {
+  --background: #1A1A19;  /* Dark page background */
+  --foreground: #F9F9F8;  /* Light text / foreground */
+  --bg-card: #20201F;     /* Dark card / container background */
+}
+
+/* ------------------------------------------------------------
+  Global Body Styles
+  Uses Tailwind @apply to assign background & text colors
+  and smooth transition when switching dark/light mode
+------------------------------------------------------------ */
+body {
+  @apply bg-background text-foreground transition-colors duration-300;
+  font-family: "Geist Sans", sans-serif; /* Set global font */
+}
